@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice</title>
+	<script type="text/javascript" src="cordova.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair&effect">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD6Is7jMEzeE2sdOXIS1Wy3WdHdTQPOTT0"></script>
+</head>
+<body onload="onLoad()">
+	<style>h2{font-family: Bellefair;}</style>
+	<div id="header">
+		<div>
+
+			<a  class="to_nav"><img id="menu" src="img/menu.png"></a>
+			<img id="logo" src="img/logo.jpg">
+			<a href="tel:+33123456789"><img id="tel" src="img/tel.png"></a>
+
+			<nav id="primary_nav">
+				<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="#">Game of Thrones</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><input type="search" name="search" placeholder="  Rechercher..." id="search"></li>
+			</ul>
+			</nav>
+		</div>
+		<div id="haut">
+			<img id="banniere" src="img/got.jpg">
+		</div>
+	</div>
+
+
+
+
+
+	<div class="in">
+
+		<div id="content">
+			<h1>Ces personnages de Game of Thrones qui pourraient vaincre le Night King !</h1>
+			<strong>En attendant le retour de Game of Thrones avec son ultime saison 8, laissons notre esprit imaginer ce qu'il pourrait bien se passer à la fin de la série. Quels personnages pourraient affronter le Night King ?</strong>
+			<p>Le temps parait bien long sans Game of Thrones. La série phare d'HBO ne sera pas de retour sur nos écrans avant 2019 ! La date officielle n'a pas encore été communiquée mais d'après les dires de Maisie Williams, alias Arya Stark, les six ultimes épisodes de la saga seront diffusés au mois d'avril. Alors au lieu de se lamenter pendant les 14 prochains mois, essayons d'utiliser notre temps à parier sur l'avenir de nos personnages préférés. Les théories fusent déjà sur la Toile : qui prendra le Trône de Fer à la fin de la saison 8 de Game of Thrones ? Qui pourrait vaincre (ou ne pas vaincre) le Night King ?</p>
+			<div class="image">
+				<img src="img/sandor.jpg">
+				<fieldset>
+					<legend align="center"><h2>SANDOR CLEGANE</h2></legend>
+					<p>Clegane est l'un des guerriers les plus redoutables de la série. Grâce à ses visions à travers les flammes, le frère de Gregor a prédit une grande bataille dans les montagnes face aux Marcheurs Blancs. Denué de toute crainte, il a vaillamment combattu aux côtés de Jon Snow. Son pouvoir de prédiction indique peut être son lien avec le Seigneur de la lumière...</p>
+				</fieldset>
+			</div><div class="image">
+				<img src="img/jon.jpg">
+				<fieldset>
+					<legend align="center"><h2>JON SNOW</h2></legend>
+					<p>Fils légitime de Rhaegar Targaryen et Lyanna Stark, Jon Snow est le la définition même de "a Song of ice and fire". Au lieu de faire des bébés avec sa tante, il devrait se concentrer sur la bataille finale pour accéder au Trône de Fer. Guerrier aguerri, il a déjà été confronté aux Marcheurs Blancs et au Night King. Sans oublier qu'il a une épée d'acier valyrienne...</p>
+				</fieldset>
+			</div><div class="image">
+				<img src="img/jaime.jpg">
+				<fieldset>
+					<legend align="center"><h2>JAIME LANNISTER</h2></legend>
+					<p>Malgré sa main en moins, Jaime Lannister est un très bon guerrier. Maintenant qu'il a ENFIN lâché sa soeur, le régicide est libre de ses actions. Va-t-il rejoindre son petit frère et la Reine des Dragons ? Si oui, Jaime pourra prouver sa détermination et son courage face au Night King. Un second roi sur sa liste de victimes pourrait être une très bonne fin !</p>
+				</fieldset>
+			</div><div class="image">
+				<img src="img/arya.png">
+				<fieldset><legend align="center"><h2>ARYA STARK</h2></legend>
+				<p>Arya n'a peur de rien et elle l'a prouvé à de multiples reprises. Elle tue aussi vite que son ombre et son pouvoir de prendre les visages est un bien très précieux pour la suite des événements. Si elle se trouve sur le champs de bataille, Arya pourra facilement atteindre le Night King et le tuer avec sa dague en acier de Valyrian grâce à sa capacité à se fondre dans la masse !</p></fieldset>
+			</div>
+
+
+		</div>
+
+
+
+		<div id="map">
+
+		</div>
+
+
+
+		<div id="form">
+
+			<form>
+				<fieldset>
+					<legend><h2>Et vous,vous pensez à qui?</h2></legend>
+					<input class="other1 effect-8" type="text" name="prenom" placeholder="Prénom" id="prenom" />
+					<input class="other2 effect-8" type="text" name="nom" placeholder="Nom" id="nom" />
+					<input class="other1 effect-8"type="text" name="date" placeholder="Date de naissance" id="date" />
+					<input class="other2 effect-8" type="text" name="ville" placeholder="Ville de naissance" id="ville" />
+					<input class="only effect-8" type="email" name="mail" placeholder="Adresse email"/>
+					<input class="only effect-8" type="file" name="photo" placeholder="Photo" accept="image/*" id="photo" capture/>
+					<textarea id="area" class="only effect-8" placeholder="Description"></textarea>
+					<input id="stockage" class="only" type="button" name="envoyer" value="Envoyer" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="form">
+
+			<form>
+				<fieldset>
+					<legend><h2>Récupération</h2></legend>
+					<input class="other1 effect-8" type="text" name="prenom" placeholder="Prénom" id="prenom2" />
+					<input class="other2 effect-8" type="text" name="nom" placeholder="Nom" id="nom2" />
+					<input class="other1 effect-8"type="text" name="date" placeholder="Date de naissance" id="date2" />
+					<input class="other2 effect-8" type="text" name="ville" placeholder="Ville de naissance" id="ville2" />
+					<input class="only effect-8" type="email" name="mail" placeholder="Adresse email" id="mail2" />
+					<textarea id="area2" class="only effect-8" placeholder="Description"></textarea>
+					<input id="lecture" class="only" type="button" name="lecture" value="Récupérer" />
+					<input id="reset" class="only" type="reset"  name="reset" value="Effacer" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="classIut">
+		<img id="iut" src="img/logo-iut.jpg">
+		<div id="test"></div>
+	</div>
+
+
+
+
+	<div id="footer">
+		<footer>
+			<p>Delobel Pierre TPA</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript">
+		function supports_geolocation() {
+  			return !!navigator.geolocation;
+		}
+
+		function get_location() {
+  			if ( supports_geolocation() ) {
+    			navigator.geolocation.getCurrentPosition(show_map, handle_error);
+  			}
+		}
+		function show_map(position) {
+			var latitude = position.coords.latitude;
+			var longitude = position.coords.longitude;
+			var latlng = new google.maps.LatLng(latitude, longitude);
+			var myOptions = {
+				zoom: 10,
+				center: latlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map"), myOptions);
+			var marker = new google.maps.Marker({
+				position: latlng,
+				title:"You are here (more or less)!"
+			});
+			marker.setMap(map);
+		}
+
+		function handle_error(err) {
+		  if (err.code == 1) {
+		    // user said no!
+
+		  }
+		}
+
+		get_location();
+
+		if(window.DeviceOrientationEvent){
+			window.addEventListener("deviceorientation",process,false);
+		}
+
+		function process(event){
+			var alpha = event.alpha;
+			var beta = event.beta;
+			var gamma = event.gamma;
+			var image = document.getElementById("iut");
+			image.style.transform = "rotateX("+alpha+"deg)";
+			image.style.transform = "rotateY("+beta+"deg)";
+			image.style.transform = "rotateZ("+gamma+"deg)";
+		}
+
+
+		// Méthode de stockage
+		document.getElementById('stockage').onclick = function() {
+			if(typeof localStorage!='undefined' && JSON) {
+				var coordonnees = {
+					prenom:document.getElementById('prenom').value,
+					nom:document.getElementById('nom').value,
+					date:document.getElementById('date').value,
+					ville:document.getElementById('ville').value,
+					/* Ne veut pas récupérer la valeur du champ mail
+					mail:document.getElementById('mail').value,*/
+					area:document.getElementById('area').value,
+				};
+				localStorage.setItem('coord',JSON.stringify(coordonnees));
+				alert("Mémorisation effectuée");
+			} else alert("localStorage n'est pas supporté");
+		};
+		// Méthode de lecture
+		document.getElementById('lecture').onclick = function() {
+			if(typeof localStorage!='undefined' && JSON) {
+				var coordonnees = JSON.parse(localStorage.getItem('coord'));
+				document.getElementById('prenom2').value = coordonnees.prenom;
+				document.getElementById('nom2').value = coordonnees.nom;
+				document.getElementById('date2').value = coordonnees.date;
+				document.getElementById('ville2').value = coordonnees.ville;
+				/*document.getElementById('mail2').value = coordonnees.mail;*/
+				document.getElementById('area2').value = coordonnees.area;
+				alert("Lecture effectuée");
+			} else alert("localStorage n'est pas supporté");
+		};
+
+		document.getElementById('reset').onclick = function() {
+			if (typeof localStorage!='undefined' && JSON) {
+				localStorage.clear();
+			}
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.example.tp3"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.example.tp3"
+    }
+  },
+  "dependent_plugins": {}
+}
